@@ -1,0 +1,85 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Sayfa genel container */
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;  
+    align-items: center;      
+    background-color: #e68900;  /* Turuncu arka plan */
+}
+
+/* Signup kutusu */
+.container {
+    width: 400px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+    border-color: #ff9800;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input kutuları */
+.inputbox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputbox input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 165, 0, 0.2);  /* şeffaf turuncu */
+    transition: all 0.3s ease;
+}
+
+.inputbox input:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+    border-color: #ff9800;
+}
+
+.inputbox input:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.6);
+}
+
+/* Buton */
+.inputbox button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff9800;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.inputbox button:hover {
+    background-color: #e68900;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+/* Genel Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Genel Konteyner */
+.container {
+  padding: 0 8%;
+  width: 100%;
+  height: 100vh;
+  background: url(images/arkaplan.jpg) no-repeat center/cover;
+
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12%;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000;
+}
+
+/* İçerik Squares */
+.container .squares {
+  padding-top: 12%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* mobil uyum */
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 130%; 
+}
+
+/* Square Kart */
+.square {
+  flex: 1 1 45%;
+  max-width: 600px;
+  min-height: 400px;
+  background-color: burlywood;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.square:hover {
+  transform: translateY(-5px);
+}
+
+/*Add Todo bölümü*/
+
+.square.todo-Add-square{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 130%; 
+  font-optical-sizing: auto;
+}
+
+.square  #TodoAddInput{
+  flex-grow: 1;
+  padding: 10px 15px;
+  height: 100px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.00);
+  border: 1px  burlywood; /*saydam olsun */
+  border-radius: 8px;
+  padding: 0 15px;
+  color: black;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  resize: none;
+
+  /*yazı*/
+
+  /* text-decoration: underline;
+  text-decoration-thickness: 1px; çizginin kalınlığı */
+  height: 100%;
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 130%; 
+  font-optical-sizing: auto;
+  line-height: 1.5; /* satır aralarını ferahlatır */
+
+  white-space: normal;   
+  word-break: break-word; 
+  overflow-wrap: break-word;
+
+}
+
+
+#TodoAddInput:focus {
+  outline: none;
+  border-color: burlywood;
+
+  /*box-shadow: 0 0 6px rgba(52, 152, 219, 0.4);*/
+}
+
+
+.square  #AddToDoButton{
+  width: 150px;
+  background: #0cee5b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+}
+
+.square #AddToDoButton:hover{
+  background: green;
+  transform: scale(1.05);
+}
+
+/* TO-DO List GET Bölümü */
+.square.todo-list-square {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.square ul {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+.square ul li span {
+  flex-grow: 1;
+  padding: 10px 15px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  white-space: normal;   /* uzun metinleri alt satıra geçirir */
+  word-break: break-word; 
+  overflow-wrap: break-word;
+}
+
+/* Clear Butonu */
+#ClearToDoButton {
+  width: 150px;
+  background: #c0392b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+#ClearToDoButton:hover {
+  background:#fc0000 ;
+  transform: scale(1.05);
+}
+
+.UpdateToDoButton{
+  width: 100px;
+  background: #e7dc3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+
+}
+
+.UpdateToDoButton:hover{
+  background: #d58905;
+  transform: scale(1.05);
+}
+
+.DeleteToDoButton{
+  width: 100px;
+  background: #e73f3c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+
+}
+
+.DeleteToDoButton:hover{
+  background: #6d0303;
+  transform: scale(1.05);
+}
